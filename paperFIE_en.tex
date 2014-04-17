@@ -32,13 +32,13 @@ Scratch \cite{resnick2009scratch}  is a programming environment that includes a 
 
 \section{Methodology}
 
-\paragraph{}En nuestro trabajo como docentes con estudiantes de secundaria, hemos detectado que muchos estudiantes presentan dos malos hábitos de manera recurrente, a pesar de nuestra constante insistencia para tratar de evitarlos, que tienen que ver con el nombrado de objetos y con la repetición de código.
+\paragraph{}--Sin retocar--In our work as teachers with high school students, we found that many students have two bad habits recurring basis, despite our constant insistence to try to avoid them having to do with the named object and code repetition.
 
-\paragraph{}Por una parte, es muy habitual comprobar que los estudiantes no cambian el nombre de los personajes, que el entorno bautiza como \textit{SpriteX}, donde X es un número incremental, de manera que al crecer el número de personajes de un proyecto resulta complicado saber a qué objeto se refiere una determinada sentencia, contribuyendo así a una mala legibilidad del código, ralentizando la programación del proyecto y complicando su depuración ante posibles errores.
-\paragraph{}Por otro lado, es también muy habitual observar a los estudiantes repetir código en un mismo proyecto, a veces incluso en los programas de un mismo personaje. De esta forma, además de complicar el mantenimiento y la actualización del código, no se trabajan los conceptos de abstracción y modularización, dos componentes fundamentales del desarrollo del pensamiento computacional \cite{wing2008computational}.
-\paragraph{}Con el objetivo de detectar estos dos comportamientos en los proyectos Scratch, se han desarrollado dos plug-ins para el entorno Hairball \cite{boe2013hairball}, que a su vez hace uso de la biblioteca implementada en python \textit{kurt}\footnote{https://github.com/blob8108/kurt}, para automatizar la localización de este tipo de prácticas en programas desarrollados en este entorno.
-\paragraph{}El plug-in \textit{convention.SpriteNaming}\footnote{https://github.com/jemole/hairball/blob/master/hairball/plugins/convention.py} analiza un proyecto Scratch para comprobar si los nombre de los distintos personajes que aparecen en el proyecto comienzan con el string \textit{Sprite}, lo que indica que el usuario no ha modificado este nombre y ha dejado el que el entorno asigna por defecto a cada nuevo personaje añadido al proyecto.
-\paragraph{}El plug-in \textit{duplicate.DuplicateScripts}\footnote{https://github.com/jemole/hairball/blob/master/hairball/plugins/duplicate.py} analiza un proyecto Scratch para tratar de localizar programas completos repetidos dentro de un proyecto. Para ello recorre cada programa del proyecto y obtiene los \textit{tokens} de los bloques que lo forman, de manera que dos bloques que tan solo difieren en los valores que reciben son considerados iguales. Para ilustrar el funcionamiento de este plug-in, la imagen\ref{fig:CodeRepetition1} muestra dos scripts que contienen los mismos bloques con la única diferencia de los valores recibidos por parámetro. 
+\paragraph{}--Sin retocar--On the one hand, it is very common to test students do not change the names of the characters, the environment christens \textit{SpriteX}, where X is an incremental number, so that with increasing number of characters in a project is difficult to know which object relates a given statement, contributing to poor code readability, slowing the project schedule and complicating debugging for possible errors.
+\paragraph{}--Sin retocar--On the other hand, is also very common to see students repeat code in the same project, sometimes even in the same character programs. Thus, further complicating the maintenance and updating of the code, not the concepts of abstraction and modularization will work, two key components of the development of computational thinking \cite{wing2008computational}.
+\paragraph{} --Sin retocar--In order to detect these two behaviors in Scratch projects, we have developed two plug-ins for the Hairball environment \cite{boe2013hairball}, which in turn makes use of the library implemented in python \textit{kurt}\footnote{https://github.com/blob8108/kurt}, to automate the positioning of this type of practice in programs developed in this environment.
+\paragraph{}--Sin retocar--The plug-in \textit{convention.SpriteNaming}\footnote{https://github.com/jemole/hairball/blob/master/hairball/plugins/convention.py} analyzes a Scratch project to check the names of the various characters in the project beginning with the string \ textit {Sprite}, indicating that the user has not changed its name and has left the system assigns a default every new character added to the project.
+\paragraph{}--Sin retocar--The plug-in \textit{duplicate.DuplicateScripts}\footnote{https://github.com/jemole/hairball/blob/master/hairball/plugins/duplicate.py} analyzes a Scratch project to try to locate repeated complete programs within a project. This program runs each project and gets the \textit{tokens} blocks that form, so that two blocks that differ only in the values received are considered equal. To illustrate the operation of this plug-in, the picture \ref{fig:CodeRepetition1} shows two scripts containing same blocks with the only difference being received by parameter values.
 \begin{figure}
   \centering
     \includegraphics{img/CodeRepetition1.png}
@@ -46,7 +46,7 @@ Scratch \cite{resnick2009scratch}  is a programming environment that includes a 
   \label{fig:CodeRepetition1}
 \end{figure}
 
-\paragraph{}Estos scripts al ser analizados por el plug-in y traducidos a \textit{tokens} serían considerados iguales, ya que su código sería traducido al siguiente conjunto de bloques:
+\paragraph{}--Sin retocar--These scripts to be analyzed by the plug-in and translated into \textit{tokens} would be considered equal, because your code would be translated to the next set of blocks:
 \begin{verbatim}
  'set rotation style %s'
  'repeat %s%s'
@@ -55,7 +55,7 @@ Scratch \cite{resnick2009scratch}  is a programming environment that includes a 
  'if on edge, bounce'
  'wait %s secs'
 \end{verbatim}
-\paragraph{} Así, la forma correcta de implementar este proyecto habría sido, tal como se muestra en la figura \ref{fig:CodeRepetition2}, definiendo un nuevo conjunto de bloques que recibe varios valores por parámetro y reutilizando el bloque creado en ambos programas, con las mejoras que esta solución implicaría en lo relativo al mantenimiento, actualización y depuración del código.
+\paragraph{} --Sin retocar-- Thus, the correct way to implement this project would have been as shown in Figure \ref{fig:CodeRepetition2}, defining a new set of blocks receiving multiple values per parameter and reusing the block created 	in both programs, with this solution would involve improvements as regards the maintenance, updating and debugging code.
 
 \begin{figure}
   \centering
@@ -64,25 +64,26 @@ Scratch \cite{resnick2009scratch}  is a programming environment that includes a 
   \label{fig:CodeRepetition2}
 \end{figure}
 
-\paragraph{}Para probar el funcionamiento de los plug-ins desarrollados y comprobar hasta qué punto estos comportamientos que habíamos detectado en nuestro trabajo se repiten también en los proyectos del repositorio de Scratch, procedimos a descargar 100 proyectos del mismo. Como la posibilidad de que los usuarios puedan definir sus propios bloques, con el uso del bloque \textit{def\_block}, solo se encuentra disponible desde el lanzamiento de Scratch 2.0, los proyectos descargados son todos posteriores a esta fecha.
+\paragraph{}--Sin retocar-- To test the functionality of the plug-ins developed and test how these behaviors that we detected in our work are also repeated in the projects repository Scratch, we proceeded to download 100 similar projects. As the possibility for users to define their own blocks, using block \textit{def\_block}, only available since the release of Scratch 2.0 downloaded projects are all after this date.
 
 
 \section{Findings}
-\paragraph{}Los datos obtenidos tras analizar los 100 proyectos descargados confirman que las observaciones realizadas con nuestros estudiantes son también muy comunes en los proyectos de la comunidad. 
-\paragraph{}En relación con la falta de costumbre de renombrar los personajes y no utilizar el nombre por defecto que asigna el entorno, el 79\% de los proyectos analizados contenían al menos un personaje sin renombrar del tipo \textit{SpriteX}.
-\paragraph{}Como ejemplo para ilustrar los inconvenientes asociados a esta mala práctica se muestra en la imagen \ref{fig:SpriteNaming} un script que resulta difícilmente legible, ya que es necesario recorrer el área de personajes para localizar a qué personaje se refiere un bloque determinado, lo que dificulta la depuración del código ante eventuales problemas o mejoras e, incluso, ralentiza la propia programación por parte del estudiante, que debe memorizar o comprobar el número de objeto sobre el que quiere realizar una acción determinada.
+\paragraph{}--Sin retocar--
+The data obtained after analyzing 100 projects downloaded observations confirm that our students are also very common in community projects.
+\paragraph{}--Sin retocar--Regarding the lack of habit of renaming the characters and do not use the default name assigned by the environment, the 79 \% of the projects analyzed contained at least one character without renaming the type \textit{SpriteX}.
+\paragraph{}--Sin retocar--As an example to illustrate the drawbacks associated with this malpractice shown in picture \ref{fig:SpriteNaming}  a script that is difficult to read as it is necessary to explore the area to find characters which character refers to a particular block, making it difficult to debug the code before any problems or improvements and even slows own programming for the student, you should memorize or check the number of object you want to perform an action.
 \begin{figure}
   \centering
     \includegraphics{img/SpriteNaming.png}
   \caption{Sprites with default names}
   \label{fig:SpriteNaming}
 \end{figure}
-\paragraph{}En cuanto a la repetición de código, el 62\% de los proyectos analizados contenían al menos un programa repetido. De hecho, tan solo el 17\% de los proyectos analizados hacían uso del bloque \textit{def\_block} para definirse un bloque propio y poder reutilizarlo en otras partes del proyecto.
+\paragraph{}--Sin retocar--As for the repetition code, 62\% of the projects analyzed contained at least one repeated program. In fact, only 17\% of the analyzed projects made use of block \textit{def\_block} to define a block itself and can be reused in other parts of the project. 
 
 \section{Conclussions}
 
-\paragraph{} En lo relativo al nombrado de objetos, es curioso comprobar que los usuarios de Scratch sí nombran correctamente, es decir, de forma significativa, las variables que utilizan en sus proyectos. En nuestra opinión esto se debe a que cuando se crea una variable es obligatorio asignarle un nombre, ya que el entorno no las nombra por defecto. Sin embargo, al crear un nuevo personaje se le asinga el nombre \textit{SpriteX} de manera automática. Quizás una modificación del entorno para que obligue al usuario a nombrar a los nuevos objetos eliminaría esta mala práctica.
-\paragraph{} En relación a la repetición de código y el poco uso que los usuarios de Scratch hacen de la definición de bloques propios (el equivalente a la creación de métodos o procedimientos en otros lenguajes), quizás trabajos como el realizado por Seiter y Foreman \cite{seiter2013modeling} en el que se pone de manifiesto que la capacidad de abstracción y la modularización son conceptos y habilidadades que parecen desarrollarse a partir de cierta edad, puedan explicar los bajos índices de uso de esta funcionalidad, ya que una parte importante de la comunidad Scratch está formada por niños menores de 10 años\footnote{http://scratch.mit.edu/statistics/\#age}. Futuros trabajos deberían seguir investigando en esta línea para continuar avanzando en la definición de un marco de trabajo apropiado para distintas edades y para comprobar si los usuarios que aprenden en línea y aquellos que lo hacen en un entorno reglado demuestran índices distintos de uso de esta funcionalidad. 
+\paragraph{} --Sin retocar--Regarding the named object is curious that other users Scratch named correctly, ie, significantly, the variables used in their projects. In our opinion this is because when you create a variable is mandatory to assign a name, because the environment does not name by default. However, when creating a new character is asinga named \textit{SpriteX} automatically. Maybe a change of environment that requires the user to name the new objects eliminate this malpractice.
+\paragraph{} --Sin retocar-- Regarding the code repetition and low usage users Scratch make the definition of own blocks (the equivalent of creating methods or procedures in other languages), you may work as performed by Seiter and Foreman \cite {seiter2013modeling} in which shows the capacity for abstraction and modularization are concepts that seem habilidadades develop from a certain age, may explain the low rates of use of this functionality, since a significant part of the Scratch community consists of children under 10 \footnote{http://scratch.mit.edu/statistics/\#age}. Future studies should further investigate this line to continue advancing in the definition of an appropriate framework for different ages and to check whether users online learning and those who do in a regulated environment show rates than use this functionality .
 
 \newpage
 \bibliography{scratch}
