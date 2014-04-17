@@ -32,13 +32,13 @@ Scratch \cite{resnick2009scratch}  is a programming environment that includes a 
 
 \section{Methodology}
 
-\paragraph{}--Sin retocar--In our work as teachers with high school students, we found that many students have two bad habits recurring basis, despite our constant insistence to try to avoid them having to do with the named object and code repetition.
+\paragraph{}In our work as teachers with high school students, we found that, despite our constant insistence and warnings to try to avoid them, many students show two bad habits in a regular basis that have to do with named object and code repetition.
 
-\paragraph{}--Sin retocar--On the one hand, it is very common to test students do not change the names of the characters, the environment christens \textit{SpriteX}, where X is an incremental number, so that with increasing number of characters in a project is difficult to know which object relates a given statement, contributing to poor code readability, slowing the project schedule and complicating debugging for possible errors.
-\paragraph{}--Sin retocar--On the other hand, is also very common to see students repeat code in the same project, sometimes even in the same character programs. Thus, further complicating the maintenance and updating of the code, not the concepts of abstraction and modularization will work, two key components of the development of computational thinking \cite{wing2008computational}.
-\paragraph{} --Sin retocar--In order to detect these two behaviors in Scratch projects, we have developed two plug-ins for the Hairball environment \cite{boe2013hairball}, which in turn makes use of the library implemented in python \textit{kurt}\footnote{https://github.com/blob8108/kurt}, to automate the positioning of this type of practice in programs developed in this environment.
-\paragraph{}--Sin retocar--The plug-in \textit{convention.SpriteNaming}\footnote{https://github.com/jemole/hairball/blob/master/hairball/plugins/convention.py} analyzes a Scratch project to check the names of the various characters in the project beginning with the string \ textit {Sprite}, indicating that the user has not changed its name and has left the system assigns a default every new character added to the project.
-\paragraph{}--Sin retocar--The plug-in \textit{duplicate.DuplicateScripts}\footnote{https://github.com/jemole/hairball/blob/master/hairball/plugins/duplicate.py} analyzes a Scratch project to try to locate repeated complete programs within a project. This program runs each project and gets the \textit{tokens} blocks that form, so that two blocks that differ only in the values received are considered equal. To illustrate the operation of this plug-in, the picture \ref{fig:CodeRepetition1} shows two scripts containing same blocks with the only difference being received by parameter values.
+\paragraph{}On the one hand, it is very common that students do not change the names of the characters, which are automatically named by the environment as \textit{SpriteX}, where X is an incremental number. When the aumount of characters in a project increases is quite hard to know which object relates to a given statement, contributing to poor code readability, slowing the project programming and complicating debugging for possible errors.
+\paragraph{}On the other hand, it is also very common to see students repeat code in the same project, sometimes even in the same character programs. Thus, besides complicating the maintenance and updating of the code, the conceptss of abstraction and modularization, two key components of the development of computational thinking \cite{wing2008computational}, are not trained.
+\paragraph{}In order to detect these two behaviors in Scratch projects, we have developed two plug-ins for the Hairball environment \cite{boe2013hairball}, which in turn makes use of kurt\textit{kurt}\footnote{https://github.com/blob8108/kurt}, a library implemented in python, to automate the detection of this type of bad practices in programs developed in this environment.
+\paragraph{}The plug-in \textit{convention.SpriteNaming}\footnote{https://github.com/jemole/hairball/blob/master/hairball/plugins/convention.py} analyzes a Scratch project to check if the names of its characters begin with the string \textit{Sprite}, which indicates that the user has not changed its name and has left the one the system assigns by default to every new character added to the project.
+\paragraph{}The plug-in \textit{duplicate.DuplicateScripts}\footnote{https://github.com/jemole/hairball/blob/master/hairball/plugins/duplicate.py} analyzes a Scratch project to try to locate repeated complete programs within a project. In order to do so the plug-in runs each project and gets the \textit{tokens} of the different blocks of the programs, so that two blocks that differ only in the received values are considered equal. To illustrate the operation of this plug-in, the picture \ref{fig:CodeRepetition1} shows two scripts containing the same blocks with the only difference of the velues received by parameter.
 \begin{figure}
   \centering
     \includegraphics{img/CodeRepetition1.png}
@@ -46,7 +46,7 @@ Scratch \cite{resnick2009scratch}  is a programming environment that includes a 
   \label{fig:CodeRepetition1}
 \end{figure}
 
-\paragraph{}--Sin retocar--These scripts to be analyzed by the plug-in and translated into \textit{tokens} would be considered equal, because your code would be translated to the next set of blocks:
+\paragraph{}When these scripts are analyzed by the plug-in and translated into \textit{tokens} they would be considered equal, as their code would be translated to the next set of \textit{tokens}:
 \begin{verbatim}
  'set rotation style %s'
  'repeat %s%s'
@@ -55,7 +55,7 @@ Scratch \cite{resnick2009scratch}  is a programming environment that includes a 
  'if on edge, bounce'
  'wait %s secs'
 \end{verbatim}
-\paragraph{} --Sin retocar-- Thus, the correct way to implement this project would have been as shown in Figure \ref{fig:CodeRepetition2}, defining a new set of blocks receiving multiple values per parameter and reusing the block created 	in both programs, with this solution would involve improvements as regards the maintenance, updating and debugging code.
+\paragraph{}Thus, the correct way to implement this project would have been as shown in Figure \ref{fig:CodeRepetition2}, defining a new set of blocks that receives several values per parameter and reusing the block created in both programs. This solution would involve improvements regarding maintenance, updating and debugging.
 
 \begin{figure}
   \centering
@@ -64,7 +64,7 @@ Scratch \cite{resnick2009scratch}  is a programming environment that includes a 
   \label{fig:CodeRepetition2}
 \end{figure}
 
-\paragraph{}--Sin retocar-- To test the functionality of the plug-ins developed and test how these behaviors that we detected in our work are also repeated in the projects repository Scratch, we proceeded to download 100 similar projects. As the possibility for users to define their own blocks, using block \textit{def\_block}, only available since the release of Scratch 2.0 downloaded projects are all after this date.
+\paragraph{}In order to test the functionality of the developed plug-ins and test whether these behaviors that we detected in our work are also repeated in the projects of the Scratch repository, we proceeded to download 100 projects from the repository. As the possibility for users to define their own blocks, using \textit{def\_block} block, is only available since the release of Scratch 2.0, downloaded projects were all created after that date.
 
 
 \section{Findings}
