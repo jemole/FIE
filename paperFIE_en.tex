@@ -24,7 +24,7 @@ grex@gsyc.urjc.es}}
 \maketitle
 
 \begin{abstract}
-This paper describes a method for automatic detection of two bad programming habits that students learning to program with Scratch incur, such as the repetition of code and object naming, and raises ideas to try to avoid such situations. FIXME: some methodology, results and conclusions should be included
+This paper describes a method for automatic detection of two bad programming habits that students learning to program with Scratch incur, such as the repetition of code and object naming, and raises ideas to try to avoid such situations. FIXME: some methodology, results and conclusions should be included in the abstract.
 
 \end{abstract}
 
@@ -32,31 +32,33 @@ This paper describes a method for automatic detection of two bad programming hab
 
 Scratch~\cite{resnick2009scratch}  is a programming environment including a visual programming language designed for children over 6 years old, a development environment and a website where the community can host their projects, run, study and reuse other programs, and share ideas or suggestions with other programmers. Although there are several similar visual programming languages, Scratch is undoubtedly the most successful one with more than three million registered users on its website and more than five million shared projects in its repository\footnote{See http://scratch.mit.edu/statistics/}.
 
-Scratch is being used both in extracurricular activities~\cite{maloney2008programming, kafai2010entering} or summer camps~\cite{adams2010scratching, franklin2013assessment}, as in elementary schools~\cite{wilson2012evaluation}, high schools~\cite{meerbaum2013learning} and even universities worldwide~\cite{wolz2009starting, malan2007scratch}. Its capacity to bring computer programming to children and teenagers with the aim of fostering computational thinking abilities and to promote ICT studies, and its success to teach both basic and advanced programming concepts have been documented (FIXME: reference required).
+Scratch is being used both in extracurricular activities~\cite{maloney2008programming, kafai2010entering} or summer camps~\cite{adams2010scratching, franklin2013assessment}, as in elementary schools~\cite{wilson2012evaluation}, high schools~\cite{meerbaum2013learning} and even universities worldwide~\cite{wolz2009starting, malan2007scratch}. Its capacity to bring computer programming to children and teenagers with the aim of fostering computational thinking abilities and to promote ICT studies, and its success to teach both basic and advanced programming concepts (concepts such as user interaction, conditional statements, communication and synchronization, logical expressions and data representation are taught) has been documented (FIXME: reference required).
 
 However, it is also possible to find studies that have detected some bad programming habits in students learning to program in this environment~\cite{meerbaum2011habits}. In this line, in our work as instructors we have detected bad habits despite having insisted our students to avoid them. As these habits are contrary to the basic programming recommendations, our study tries to detect if they are also common in the projects shared in the Scratch repository, and propose some ideas to try to avoid such situations.
 
-The structure of this paper is as follows: In section~\ref{sec:background} a brief overview of Scratch is presented, including some research studies that have investigated the learning in this environment, and studies that automate the evaluation of this learning are exposed. In section~\ref{sec:methodology}, our work methodology is described. Section~\ref{sec:findings} presents the obtained results. Finally, in Section~\ref{sec:conclusions} the conclusions of our study are discussed and some ideas and suggestions for future work are provided.
+FIXME: the goal of this paper is to...
+
+The structure of this paper is as follows: In section~\ref{sec:background} a brief overview of Scratch is presented, including some research studies that have investigated learning in this environment and other studies that automate the evaluation of learning. In section~\ref{sec:methodology} our work methodology is briefly described. Section~\ref{sec:findings} presents the results we have obtained from applying our methodology on a small sample of Scratch projects. Finally, Section~\ref{sec:conclusions} contains the conclusions of our study and some ideas and suggestions for future work are discussed.
 
 \section{Background}
 \label{sec:background}
 
-Scratch is a visual programming environment developed by the Lifelong Kindergarten group at MIT Media Laboratory that allows to program interactive projects using a drag-and-drop approach with different pieces or \textit {Lego} style blocks~\cite{resnick2009scratch}. Scratch was designed with the main goal of encouraging young people to program, and most of its users are novice learners with no prior programming experience~\cite{maloney2010scratch}. The environment is designed to encourage users to manipulate and modify various media types, so that children and youth can create projects that they find interesting and attractive, such as animated stories, games or interactive presentations~\cite{maloney2008programming}.
+Scratch is a visual programming environment, developed by the Lifelong Kindergarten group at the MIT Media Laboratory, that allows to program interactive projects using a drag-and-drop approach with different pieces or \textit {Lego} style blocks~\cite{resnick2009scratch}. Scratch was designed with the main goal of encouraging young people to program, and most of its users are novice learners with no prior programming experience~\cite{maloney2010scratch}. The environment is designed to encourage users to manipulate and modify various media types, so that children and teenagers can create projects that they find interesting and attractive, such as animated stories, games or interactive presentations~\cite{maloney2008programming}.
 
-Scratch also offers a website where the projects programmed by the community are published, the code of each program can be studied, and it is possible to make suggestions and reuse the code of any project, so there are lots of valuable resources available for anyone willing to start to program. This approach also offers the opportunity to learn certain social skills related to programming, such as sharing and contributing to the community~\cite{scaffidi2012skill}.
+Scratch also offers a website where the projects programmed by the community are published. The code of programs hosted there can be studied and analyzed, and it is possible to make suggestions and reuse the code, so there are lots of valuable resources available for anyone willing to start to program. This approach also offers the opportunity to learn certain social skills related to programming, such as sharing and contributing to the community~\cite{scaffidi2012skill}.
 
-As mentioned in the introduction, many papers showing that Scratch works as a tool for learning to program can be found~\cite{maloney2008programming, franklin2013assessment, scaffidi2012skill, malan2007scratch}, as there are success stories at different educational levels, environments and disciplines showing that students learn concepts such as user interaction, conditional statements, communication and synchronization, logical expressions and data representation.
+% repe
+%There are many papers showing that Scratch works as a tool for learning to program~\cite{maloney2008programming, franklin2013assessment, scaffidi2012skill, malan2007scratch}, and there are success stories at different educational levels, environments and disciplines showing that students learn concepts such as user interaction, conditional statements, communication and synchronization, logical expressions and data representation.
 
-Despite these good results, Meerbaum-Salant, Armoni and Ben-Ari~\cite{meerbaum2011habits} prove that students learning to program in this environment show some bad habits that are contrary to recommended programming practices. In particular, they show excessive decomposition tendency and a development process absolutely from bottom to top starting with individual blocks of Scratch.
+Despite the positive impact of Scratch, Meerbaum-Salant, Armoni and Ben-Ari~\cite{meerbaum2011habits} prove that students learning to program in this environment show some bad habits that are contrary to recommended programming practices. In particular, they show a tendency to excessive decomposition and a bottom-up development process, starting with individual blocks of Scratch.
 
- Aiming to simplify the process of evaluating the Computational Thinking and help evaluators with an automation tool, Hairball was created~\cite{boe2013hairball}. Hairball is a static analyzer of Scratch projects inspired by Lint\footnote{http:// www.unix.com/man-page/FreeBSD/1/lint} that tries to detect programming errors in Scratch projects, such as not initializing the value of a variable or the state of a character, sending messages that are not received by any program or including code that is never run.
+Aiming to simplify the process of evaluating computational thinking and help evaluators with an automatic tool, Hairball was created~\cite{boe2013hairball}. Hairball is a static analyzer of Scratch projects inspired by Lint\footnote{http://www.unix.com/man-page/FreeBSD/1/lint} that tries to detect programming errors in Scratch projects, such as not initializing the value of a variable or the state of a character, sending messages that are not received by any program, including code that is never run, among others.
 
 \section{Methodology}
 \label{sec:methodology}
 
 In our work as instructors with high school students, we found that, despite our constant insistence and warnings to try to avoid them, many students show two bad habits in a regular basis that have to do with object naming and code repetition.
-
-
+    
 On the one hand, it is very common that students do not change the names of the characters, which are automatically named by the environment as \textit{SpriteX}, where X is an incremental number. When the amount of characters in a project increases, it is quite hard to know which object relates to a given statement, contributing to poor code readability, slowing the project programming and complicating debugging to fix bugs.
 
 On the other hand, it is also very common to see students repeating code in the same project, sometimes even in the same character programs. Thus, besides complicating the maintenance and updating of the code, abstraction and modularization, two key components of the development of computational thinking~\cite{wing2008computational}, are not trained.
@@ -68,7 +70,7 @@ The plug-in \textit{convention.SpriteNaming}\footnote{https://github.com/jemole/
 The plug-in \textit{duplicate.DuplicateScripts}\footnote{https://github.com/jemole/hairball/blob/master/hairball/plugins/duplicate.py} analyzes a Scratch project to try to locate repeated complete programs within a project. In order to do so the plug-in runs each project and gets the \textit{tokens} of the different blocks of the programs, so that two blocks that only differ in the values they receive are considered to be equal. To illustrate the operation of this plug-in, picture \ref{fig:CodeRepetition1} shows two scripts containing the same blocks with the only difference of the values received by parameter.
 \begin{figure}
   \centering
-    \includegraphics{img/CodeRepetition1.png}
+    \includegraphics[width=9cm]{img/CodeRepetition1.png}
   \caption{Two scripts repeating code}
   \label{fig:CodeRepetition1}
 \end{figure}
@@ -88,7 +90,7 @@ Thus, the correct way to implement this project would have been as shown in Figu
 
 \begin{figure}
   \centering
-    \includegraphics{img/CodeRepetition2.png}
+    \includegraphics[width=9cm]{img/CodeRepetition2.png}
   \caption{Defining own blocks to avoid code repetition}
   \label{fig:CodeRepetition2}
 \end{figure}
@@ -108,7 +110,7 @@ As an example to illustrate the drawbacks associated with this malpractice, pict
 
 \begin{figure}
   \centering
-    \includegraphics{img/SpriteNaming.png}
+    \includegraphics[width=9cm]{img/SpriteNaming.png}
   \caption{Sprites with default names}
   \label{fig:SpriteNaming}
 \end{figure}
@@ -118,13 +120,13 @@ As for the repetition code, 62\% of the analyzed projects contained at least one
 \section{Conclusions and further research}
 \label{sec:conclusions}
 
-FIXME: In this paper... short summary
+FIXME: In this paper... short summary of what we have done and why
 
 Regarding the object naming, it is curious that Scratch users name correctly, i.e., semantically meaningful, the variables used in their projects. In our opinion the reason to explain this paradox is because it is mandatory to assign a name to a variable the moment it is created, as the environment does not name it by default. However, when creating a new character a  \textit{SpriteX} name is assigned automatically. In our views, a change of this feature of the environment, forcing users to name new objects, might eliminate this bad practice.
 
 Regarding the code repetition and the low usage Scratch users make of the possibility of creating their own blocks (the equivalent of defining methods or procedures in other languages), works as the one performed by Seiter and Foreman~\cite {seiter2013modeling}, in which they show that abstraction and modularization capacities are concepts that seem to be developed from a certain age, may explain the low rates of use of this functionality, since a significant part of the Scratch community consists of children under 10 years old\footnote{http://scratch.mit.edu/statistics/\#age}. Future studies should further investigate to continue advancing in the definition of an appropriate framework for different ages, as well as to check whether users learning online and those who do it in a regulated environment show different use rates of this functionality.
 
-We plan to... FIXME
+In the near future, we plan to... FIXME... talk about next steps: i) more analysis, ii) more projects, iii) web-based tool that provides learning-oriented feedback in an automatic way.
 
 \section*{Acknowledgments}
 
