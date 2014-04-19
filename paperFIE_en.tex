@@ -11,7 +11,7 @@
 \author{\IEEEauthorblockN{Jesús Moreno}
 \IEEEauthorblockA{INTEF \& Programamos.es\\
 Madrid, Spain\\
-j.morenol@gmail.com}
+jesus.moreno@programamos.es}
 \and
 \IEEEauthorblockN{Gregorio Robles}
 \IEEEauthorblockA{GSyC/LibreSoft\\Universidad Rey Juan Carlos\\
@@ -32,7 +32,7 @@ This paper describes a method for automatic detection of two bad programming hab
 
 Scratch~\cite{resnick2009scratch}  is a programming environment including a visual programming language designed for children over 6 years old, a development environment and a website where the community can host their projects, run, study and reuse other programs, and share ideas or suggestions with other programmers. Although there are several similar visual programming languages, Scratch is undoubtedly the most successful one with more than three million registered users on its website and more than five million shared projects in its repository\footnote{See http://scratch.mit.edu/statistics/}.
 
-Scratch is being used both in extracurricular activities~\cite{maloney2008programming, kafai2010entering} or summer camps~\cite{adams2010scratching, franklin2013assessment}, as in elementary schools~\cite{wilson2012evaluation}, high schools~\cite{meerbaum2013learning} and even universities worldwide~\cite{wolz2009starting, malan2007scratch}. Its capacity to bring computer programming to children and teenagers with the aim of fostering computational thinking abilities and to promote ICT studies, and its success to teach both basic and advanced programming concepts (concepts such as user interaction, conditional statements, communication and synchronization, logical expressions and data representation are taught) has been documented (FIXME: reference required).
+Scratch is being used both in extracurricular activities~\cite{kafai2010entering} or summer camps~\cite{adams2010scratching}, as in elementary schools~\cite{wilson2012evaluation}, high schools~\cite{meerbaum2013learning} and even universities worldwide~\cite{malan2007scratch}. Its capacity to bring computer programming to children and teenagers with the aim of fostering computational thinking abilities and to promote ICT studies, and its success to teach both basic and advanced programming concepts (concepts such as user interaction, conditional statements, communication and synchronization, logical expressions and data representation are taught) has been documented~\cite{maloney2008programming, franklin2013assessment, wolz2009starting}.
 
 However, it is also possible to find studies that have detected some bad programming habits in students learning to program in this environment~\cite{meerbaum2011habits}. In this line, in our work as instructors we have detected bad habits despite having insisted our students to avoid them. As these habits are contrary to the basic programming recommendations, our study tries to detect if they are also common in the projects shared in the Scratch repository, and propose some ideas to try to avoid such situations.
 
@@ -120,13 +120,17 @@ As for the repetition code, 62\% of the analyzed projects contained at least one
 \section{Conclusions and further research}
 \label{sec:conclusions}
 
-FIXME: In this paper... short summary of what we have done and why
+%FIXME: In this paper... short summary of what we have done and why
+
+This paper shows the preliminary results of a study regarding two bad programming habits we have detected in our work as instructors with high school students learning to program with Scratch. In order to check if these bad habits, which have to do with object naming and code repetition, are also commonly found in the projects shared in the community repository, we downloaded 100 proyects and analyzed them with two plug-ins we developed for Hairball, detecting that most of the inspected proyects, 79\% and 62\%  respectively, fell into these issues.
 
 Regarding the object naming, it is curious that Scratch users name correctly, i.e., semantically meaningful, the variables used in their projects. In our opinion the reason to explain this paradox is because it is mandatory to assign a name to a variable the moment it is created, as the environment does not name it by default. However, when creating a new character a  \textit{SpriteX} name is assigned automatically. In our views, a change of this feature of the environment, forcing users to name new objects, might eliminate this bad practice.
 
 Regarding the code repetition and the low usage Scratch users make of the possibility of creating their own blocks (the equivalent of defining methods or procedures in other languages), works as the one performed by Seiter and Foreman~\cite {seiter2013modeling}, in which they show that abstraction and modularization capacities are concepts that seem to be developed from a certain age, may explain the low rates of use of this functionality, since a significant part of the Scratch community consists of children under 10 years old\footnote{http://scratch.mit.edu/statistics/\#age}. Future studies should further investigate to continue advancing in the definition of an appropriate framework for different ages, as well as to check whether users learning online and those who do it in a regulated environment show different use rates of this functionality.
 
-In the near future, we plan to... FIXME... talk about next steps: i) more analysis, ii) more projects, iii) web-based tool that provides learning-oriented feedback in an automatic way.
+%In the near future, we plan to... FIXME... talk about next steps: i) more analysis, ii) more projects, iii) web-based tool that provides learning-oriented feedback in an automatic way.
+
+In the near future we plan to extend the scope of our study developing new plug-ins to automate the detection of other issues, such as the degree of development of computational thinking demonstrated in a project, and analyzing a much larger number of projects. In this sense, the release of a research dataset with the first five years of data from the Scratch repository\footnote{https://sites.google.com/site/scratchdatameeting/} will be certainly a great help to our work. Finally, we are in the process of developing a website that will allow students to receive feedback from each of its programs with warnings of potential errors and tips to improve their code, and will offer teachers a tool to assist them in correcting their students proyects.
 
 \section*{Acknowledgments}
 
