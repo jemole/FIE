@@ -24,7 +24,16 @@ grex@gsyc.urjc.es}}
 \maketitle
 
 \begin{abstract}
-This paper describes a method for automatic detection of two bad programming habits that students learning to program with Scratch incur, such as the repetition of code and object naming, and raises ideas to try to avoid such situations. FIXME: some methodology, results and conclusions should be included in the abstract.
+%This paper describes a method for automatic detection of two bad programming habits that students learning to program with Scratch incur, such as the repetition of code and object naming, and raises ideas to try to avoid such situations. FIXME: some methodology, results and conclusions should be included in the abstract.
+Using Scratch as a tool to teach computing science or to work computational thinking from other disciplines is increasingly common in all levels of education, and it is possible to find well-documented success case studies from primary school to university.
+
+However, there are reports indicating that students learning to program in this environment show certain habits that are contrary to the basic programming recommendations. 
+
+In our work as instructors with high school students learning to program with Scratch, we also found some common bad practices, such as the repetition of code and object naming, and this study focuses on checking whether these habits are repeated in the projects shared on the community website. 
+
+To test this hypothesys, we downloaded 100 projects from the Scratch website and analyzed them with two plug-ins we developed to detect these bad practices extending the functionality of the tool Hairball, a static code analyzer for Scratch projects. The obtained results indicate that, in general, the projects in the repository also incur in these type of malpractices. 
+
+Along with suggestions for future work, some ideas that might assist to avoid such situations are proposed in the conclusions of the paper.
 
 \end{abstract}
 
@@ -34,9 +43,10 @@ Scratch~\cite{resnick2009scratch}  is a programming environment including a visu
 
 Scratch is being used both in extracurricular activities~\cite{kafai2010entering} or summer camps~\cite{adams2010scratching}, as in elementary schools~\cite{wilson2012evaluation}, high schools~\cite{meerbaum2013learning} and even universities worldwide~\cite{malan2007scratch}. Its capacity to bring computer programming to children and teenagers with the aim of fostering computational thinking abilities and to promote ICT studies, and its success to teach both basic and advanced programming concepts (concepts such as user interaction, conditional statements, communication and synchronization, logical expressions and data representation are taught) has been documented~\cite{maloney2008programming, franklin2013assessment, wolz2009starting}.
 
-However, it is also possible to find studies that have detected some bad programming habits in students learning to program in this environment~\cite{meerbaum2011habits}. In this line, in our work as instructors we have detected bad habits despite having insisted our students to avoid them. As these habits are contrary to the basic programming recommendations, our study tries to detect if they are also common in the projects shared in the Scratch repository, and propose some ideas to try to avoid such situations.
+However, it is also possible to find studies that have detected some bad programming habits in students learning to program in this environment~\cite{meerbaum2011habits}. In this line, in our work as instructors we have detected bad habits despite having insisted our students to avoid them. As these habits are contrary to the basic programming recommendations, our study tries to find out if they are also common in the projects shared in the Scratch repository, and propose some ideas to try to avoid such situations.
 
-FIXME: the goal of this paper is to...
+FIXME: the goal of this paper is to... 
+% ¿No estaría explicado justo en el párrafo de encima? ¿Habría que explicarlo más detalladamente?
 
 The structure of this paper is as follows: In section~\ref{sec:background} a brief overview of Scratch is presented, including some research studies that have investigated learning in this environment and other studies that automate the evaluation of learning. In section~\ref{sec:methodology} our work methodology is briefly described. Section~\ref{sec:findings} presents the results we have obtained from applying our methodology on a small sample of Scratch projects. Finally, Section~\ref{sec:conclusions} contains the conclusions of our study and some ideas and suggestions for future work are discussed.
 
@@ -130,7 +140,7 @@ Regarding the code repetition and the low usage Scratch users make of the possib
 
 %In the near future, we plan to... FIXME... talk about next steps: i) more analysis, ii) more projects, iii) web-based tool that provides learning-oriented feedback in an automatic way.
 
-In the near future we plan to extend the scope of our study developing new plug-ins to automate the detection of other issues, such as the degree of development of computational thinking demonstrated in a project, and analyzing a much larger number of projects. In this sense, the release of a research dataset with the first five years of data from the Scratch repository\footnote{https://sites.google.com/site/scratchdatameeting/} will be certainly a great help to our work. Finally, we are in the process of developing a website that will allow students to receive feedback from each of its programs with warnings of potential errors and tips to improve their code, and will offer teachers a tool to assist them in correcting their students proyects.
+In the near future we plan to extend the scope of our study developing new plug-ins to automate the detection of other issues, such as the degree of development of computational thinking demonstrated in a project, and analyzing a much larger number of projects to achieve more accurate conclusions. In this sense, the release of a research dataset with the first five years of data from the Scratch repository\footnote{https://sites.google.com/site/scratchdatameeting/} will be certainly a great help to our work. Finally, we are in the process of developing a website that will allow students to receive feedback from each of its programs with warnings of potential errors and tips to improve their code, and will offer teachers a tool to assist them in correcting their students proyects.
 
 \section*{Acknowledgments}
 
