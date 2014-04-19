@@ -25,13 +25,11 @@ grex@gsyc.urjc.es}}
 
 \begin{abstract}
 %This paper describes a method for automatic detection of two bad programming habits that students learning to program with Scratch incur, such as the repetition of code and object naming, and raises ideas to try to avoid such situations. FIXME: some methodology, results and conclusions should be included in the abstract.
-Using Scratch as a tool to teach computing science or to work computational thinking from other disciplines is increasingly common in all levels of education, and it is possible to find well-documented success case studies from primary school to university.
+Using Scratch as a tool to teach Computer Science or develop Computational Thinking from other disciplines is increasingly common in all levels of education, and it is possible to find well-documented success case studies from primary school to university experiences.
 
-However, there are reports indicating that students learning to program in this environment show certain habits that are contrary to the basic programming recommendations. 
+However, there are reports indicating that students learning to program in this environment show certain habits that are contrary to the basic programming recommendations. In our work as instructors with high school students learning to program with Scratch, we also detected some common bad practices, such as the repetition of code and object naming, and this study focuses on checking whether these issues can be found in the projects shared on the community website. 
 
-In our work as instructors with high school students learning to program with Scratch, we also found some common bad practices, such as the repetition of code and object naming, and this study focuses on checking whether these habits are repeated in the projects shared on the community website. 
-
-To test this hypothesys, we downloaded 100 projects from the Scratch website and analyzed them with two plug-ins we developed to detect these bad practices extending the functionality of the tool Hairball, a static code analyzer for Scratch projects. The obtained results indicate that, in general, the projects in the repository also incur in these type of malpractices. 
+To test this hypothesys, we downloaded 100 projects from the Scratch website and analyzed them with two plug-ins we developed to automatically detect these bad practices. The plug-ins extend the functionality of the tool Hairball, a static code analyzer for Scratch projects. The obtained results indicate that, in general, projects in the repository also incur in the investigated malpractices.
 
 Along with suggestions for future work, some ideas that might assist to avoid such situations are proposed in the conclusions of the paper.
 
@@ -106,7 +104,7 @@ Thus, the correct way to implement this project would have been as shown in Figu
 \end{figure}
 
 
-In order to test the functionality of the developed plug-ins and test whether these behaviors that we detected in our work are also common in the projects of the Scratch repository, we proceeded to download 100 projects from the repository. As the possibility for users to define their own blocks, using \textit{def\_block} feature, is only available since the release of Scratch 2.0, we selected and downloaded projects created after that date.
+In order to test the functionality of the developed plug-ins and check whether these behaviors that we detected in our work are also common in the projects of the Scratch repository, we proceeded to download 100 projects from the repository. As the possibility for users to define their own blocks, using \textit{def\_block} feature, is only available since the release of Scratch 2.0, we selected and downloaded projects created after that date.
 
 
 \section{Findings}
