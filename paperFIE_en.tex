@@ -5,6 +5,7 @@
 \usepackage{graphicx}
 \usepackage{url}
 
+
 %opening
 \title{Automatic Detection of Bad Programming Habits in Scratch: A Preliminary Study}
 %\author{Jesús Moreno, Gregorio Robles}
@@ -28,7 +29,7 @@ grex@gsyc.urjc.es}}
 %This paper describes a method for automatic detection of two bad programming habits that students learning to program with Scratch incur, such as the repetition of code and object naming, and raises ideas to try to avoid such situations. FIXME: some methodology, results and conclusions should be included in the abstract.
 Using the Scratch environment as a tool to teach programming skills or develop computational thinking is increasingly common in all levels of education, well-documented case studies from primary school to university can be found.
 
-However, there are reports that indicate that students learning to program in this environment show certain habits that are contrary to the basic programming recommendations. In our work as instructors with high school students, we have detected these and other bad practices, such as the repetition of code and object naming, on a regular basis. This paper focuses on verifying whether these issues can be generally be found in the Scratch community, by analyzing a large number of projects available on the Scractch community website.
+However, there are reports that indicate that students learning to program in this environment show certain habits that are contrary to the basic programming recommendations. In our work as instructors with high school students, we have detected these and other bad practices, such as the repetition of code and object naming, on a regular basis. This paper focuses on verifying whether these issues can generally be found in the Scratch community, by analyzing a large number of projects available on the Scractch community website.
 
 To test this hypothesis, we downloaded 100 projects and analyzed them with two plug-ins we developed to automatically detect these bad practices. The plug-ins extend the functionality of the Hairball tool, a static code analyzer for Scratch projects. 
 
@@ -90,7 +91,9 @@ As an example to illustrate the drawbacks associated with this bad programming b
   \label{fig:SpriteNaming}
 \end{figure}
 
-  \item \textit{duplicate.DuplicateScripts}\footnote{\url{https://github.com/jemole/hairball/blob/master/hairball/plugins/duplicate.py}} analyzes a Scratch project to try to locate repeated complete programs within a project. In order to do so, the plug-in runs each project and gets the \textit{tokens} of the different blocks of the programs, so that two blocks that only differ in the values they receive are considered to be equal. To illustrate the operation of this plug-in, Fig.~\ref{fig:CodeRepetition1} shows two scripts containing the same blocks with the only difference of the values received by parameter.
+  \item \textit{duplicate.DuplicateScripts}\footnote{\url{https://github.com/jemole/hairball/blob/master/hairball/plugins/duplicate.py}} analyzes a Scratch project to try to locate repeated complete programs within a project. In order to do so, the plug-in runs each script of the project and gets the \textit{tokens} of the different blocks of the programs, so that two blocks that only differ in the values they receive are considered to be equal. A minimum length of five blocks is applied for programs to be considered duplicate rather than coincidentally similar.
+  
+  To illustrate the operation of this plug-in, Fig.~\ref{fig:CodeRepetition1} shows two scripts containing the same blocks with the only difference of the values received by parameter.
 
 
 \begin{figure}
@@ -129,13 +132,34 @@ In order to test the functionality of the developed plug-ins and to verify wheth
 \section{Findings}
 \label{sec:findings}
 
-The results obtained after analyzing the 100 projects confirm that observations made with our students can also be generally found in the community projects.
+The results obtained after analyzing the 100 projects confirm that observations made with our students can also be generally found in the community projects, as shown in table \ref{table:results}.
 
 Regarding the lack of habit of renaming the characters and not using the default name assigned by the environment, 79\% of the analyzed projects contained at least one non-renamed \textit{SpriteX} character.
 
 As for the repetition code, 62\% of the analyzed projects contained at least one repeated program. In fact, only 17\% of the analyzed projects made use of block \textit{def\_block} to define its own blocks that can be reused in other parts of the project. 
 
 FIXME: here comes the table with some more results. Important: to note how the distribution (talk about mean and median).
+
+\begin{table}
+\begin{center}
+  \begin{tabular}{ | p{2.5cm} | p{1cm} | p{1.2cm} | p{1cm} |}
+   \hline
+     & Default names & Duplicated scripts & Defined blocks \\ \hline\hline
+    Projects incurring in & 79 & 62 & 17 \\ \hline
+    Mean & 5.94 & 7.23 & 1.11 \\ \hline
+    Median & 3 & 2 & 0 \\ \hline
+    Maximum & 67 & 71 & 25 \\
+    \hline    
+  \end{tabular}
+\end{center}
+\caption{Table of results}
+\label{table:results}
+\end{table}
+
+
+
+
+
 
 
 
