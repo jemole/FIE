@@ -86,7 +86,7 @@ For those images, \emph{fair use} applies.
 }
 %%
 
-\section{About}
+\section{FIE 2014 - eMadrid Session}
 
 
 %--------------------------------------------------------
@@ -96,7 +96,7 @@ For those images, \emph{fair use} applies.
 \frametitle{Goal of our paper}
 
 \begin{center}
-\Huge Are bad programming habits a common practice in the Scratch community?
+\Huge {\bf Are bad programming habits a common practice in the Scratch community?}
 \end{center}
 
 \end{frame}
@@ -112,9 +112,9 @@ For those images, \emph{fair use} applies.
 Who should/could be interested in this talk?
 
 \begin{itemize}
-  \item Educators teaching to code
-  \item Students learning to code
-  \item Programming learning tools developers
+  \item Educators teaching how to code
+  \item Students learning to program
+  \item Developers of programming learning tools
 \end{itemize} 
 
 \end{frame}
@@ -129,10 +129,10 @@ Who should/could be interested in this talk?
     \begin{column}{1\textwidth}
      \begin{block}{Learning to code with Scratch}
 \begin{itemize}
-  \item Success to teach both basic and advanced programming concepts
-  \item Bad programming habits detected
-  \item Lack of automatic tools to check for \textit{correctness}
-  \item Hairball: Lint-inspired Static Analysis of Scratch Projects
+  \item Scratch has shown to be successfull in teaching basic and advanced programming concepts
+  \item However, bad programming habits have been detected
+  \item There are no automatic tools to check for \textit{correctness}
+  \item \texttt{Hairball}: \texttt{lint}-inspired static analysis of Scratch projects
 \end{itemize}
     \end{block}
     \end{column}
@@ -145,7 +145,7 @@ Who should/could be interested in this talk?
 
 %--------------------------------------------------------
 \begin{frame}
-\frametitle{Bad programming habits with Scratch: objects naming}
+\frametitle{Bad programming habits with Scratch (I)}
 
 \begin{figure}[t!]
 \begin{center}
@@ -155,35 +155,39 @@ Who should/could be interested in this talk?
 \end{figure}
 
 \begin{center}
-Sprites naming
+\emph{Bad}/default naming of sprites
 \end{center}
 \end{frame}
 
 %--------------------------------------------------------
 \begin{frame}
-\frametitle{Bad programming habits with Scratch: repetition code}
+\frametitle{Bad programming habits in Scratch (and II)}
 
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+ 
+     \begin{block}{Example of repeated code}
 \begin{figure}[t!]
 \begin{center}
-\includegraphics[width=6cm,height=2.7cm]{figs/CodeRepetition1.png}
+\includegraphics[width=5.4cm,height=2.5cm]{figs/CodeRepetition1.png}
 \end{center}
 \label{fig:repetition1}
 \end{figure}
-
-\begin{center}
-Repetition code
-\end{center}
-
+     \end{block}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+     \begin{block}{Solution to avoid repeated code}
 \begin{figure}[t!]
 \begin{center}
-\includegraphics[width=6cm,height=2.7cm]{figs/CodeRepetition2.png}
+\includegraphics[width=5.4cm,height=2.5cm]{figs/CodeRepetition2.png}
 \end{center}
+Blocks should be created to avoid repetition of code
 \label{fig:repetition2}
 \end{figure}
+     \end{block}
 
-\begin{center}
-Creating blocks to avoid repetition code
-\end{center}
+    \end{column}
+  \end{columns}
 
 \end{frame}
 
@@ -194,11 +198,19 @@ Creating blocks to avoid repetition code
 \begin{frame}
 \frametitle{Hairball plug-ins development}
 
-We developed two plug-ins for Hairball to automatically detect bad programming habits:
-\begin{itemize}
+  \begin{columns}[T]
+    \begin{column}{0.8\textwidth}
+     \begin{block}{\vspace{0.1cm}\center{We have developed two plug-ins for Hairball to automatically detect bad programming habits}\vspace{0.1cm}}
+\vspace{0.3cm}
+\begin{enumerate}
   \item convention.SpriteNaming
+\vspace{0.15cm}
   \item duplicate.DuplicateScripts
-\end{itemize}
+\end{enumerate}
+\vspace{0.4cm}
+    \end{block}
+    \end{column}
+  \end{columns}
 
 \end{frame}
 
@@ -213,17 +225,17 @@ We developed two plug-ins for Hairball to automatically detect bad programming h
 
 \begin{table}
 \begin{center}
-  \begin{tabular}{ | l | r | r | r |}
+  \begin{tabular}{ | l | c | c | c |}
    \hline
               & Default names & Duplicated scripts & Defined blocks \\ \hline\hline
     Projects & 79 & 62 & 17 \\ \hline
     Mean & 5.94 & 7.23 & 1.11 \\ \hline
-    Median & 3 & 2 & 0 \\ \hline
+ 22   Median & 3 & 2 & 0 \\ \hline
     Maximum & 67 & 71 & 25 \\
     \hline    
   \end{tabular}
 \end{center}
-\caption{Analysis of 100 ramdonly downloaded projects}
+\caption{Analysis of 100 ramdonly downloaded Scratch projects}
 \label{table:results}
 \end{table}
 \end{frame}
@@ -236,11 +248,11 @@ We developed two plug-ins for Hairball to automatically detect bad programming h
 \begin{frame}
 \frametitle{Future Work}
 
-\begin{itemize}
+\begin{enumerate}
   \item Extend the scope of the study developing new plug-ins
-  \item Analyze dataset with 5 years data from Scratch website
-  \item Dr.Scratch: http://drscratch.programamos.es
-\end{itemize}
+  \item Analyze dataset with 5 years of data from the Scratch website
+  \item Dr. Scratch (alpha version): http://drscratch.programamos.es
+\end{enumerate}
 \vspace{\baselineskip}
 \vspace{\baselineskip}
 \hfill{\Tiny Background picture: Simon Cunningham }
